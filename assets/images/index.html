@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>English - memorama</title>
+    <script src="jquey/jquery-3.5.1.min.js" ></script>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        .contenedor{
+            text-align: center;
+            padding: 30px 10px;
+            height: 100%;
+            background: #5DADE2;
+            display: inline-block;
+        }
+        
+        .contenedor-tarjeta{
+             height: 100%;
+             width: 100%;
+             background: #7FB3D5;
+             display: flex;
+             justify-content: center;
+             flex-flow: wrap row; 
+        }
+        .contenedor-tarjeta .tarjeta{
+            background: black;
+            width: 150px;
+            height: 150px;
+            display: inline-block;
+            margin: 20px 20px;
+            outline: 1px solid blue;
+        }
+        .contenedor-tarjeta .tarjeta img{
+            background:  none;
+            display: block;
+            height: 100%;
+            width: 100%;
+            opacity: 100%;
+        }
+        .contenedor-tarjeta .tarjeta img:hover{
+            opacity: 50%;
+            background: black;
+        }
+    </style>
+</head>
+
+
+<body>
+        <div class="contenedor" id="lista">
+            <div class="contenedor-tarjeta">
+                
+                <button class="tarjeta"> 
+                    <img src="awake.jpg" /> 
+                </button>
+                
+            </div>
+        </div>
+</body>
+<script type="text/javascript">
+    
+    $(document).ready(function(){
+        var contenido = "<button class='tarjeta'><img src='awake.jpg'/></button>";
+        $('.contenedor-tarjeta').append(contenido);
+        
+        $('.tarjeta').click(function () {
+            $(this).css("background","url('awake.jpg')");
+        });
+    });
+    /*
+    var arrayImg = ["arise","awake","bear",
+                    "beat","become","begin"];
+    
+    for (let i=0; i<arrayImg.length; i++){
+        arrayImg[i]= arrayImg[i]+".jpg";
+    }
+   
+    var img = "<img src='arise.jpg' width='60px' height='60px'/>"+
+        "<img src='awake.jpg' width='60px' height='60px'/>"+
+        "<img src='bear.jpg' width='60px' height='60px'/>";
+    var lista = document.getElementById("lista");
+    lista.innerHTML += img;
+    */
+</script>
+
+</html>
