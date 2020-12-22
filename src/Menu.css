@@ -1,0 +1,35 @@
+.contenedor{
+    text-align: center;
+    padding: 30px 10px;
+    height: 100%;
+    background: #5DADE2;
+    display: inline-block;
+}
+
+.contenedor-tarjeta{
+     height: 100%;
+     width: 100%;
+     background: #7FB3D5;
+     display: flex;
+     justify-content: center;
+     flex-flow: wrap row; 
+}
+.contenedor-tarjeta .tarjeta{
+    background: black;
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    margin: 20px 20px;
+    outline: 1px solid blue;
+}
+.contenedor-tarjeta .tarjeta img{
+    background:  none;
+    display: block;
+    height: 100%;
+    width: 100%;
+    opacity: 100%;
+}
+.contenedor-tarjeta .tarjeta img:hover{
+    opacity: 50%;
+    background: black;
+}
